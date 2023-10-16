@@ -15,12 +15,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
-    public void somar(View view){
-
-        TextView soma = findViewById(R.id.clicks);
-        contador++;
-        soma.setText("Numero de vezes clicados " + contador);
 
     }
+    public void teste( View view){
+        TextView somar = findViewById(R.id.clicks);
+        Button acao = findViewById(R.id.clique);
+        acao.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                contador++;
+                somar.setText("Número de vezes clicado: " + contador);
+            }
+        });
+    }
+
+   // public void somar(View view){
+
+        //TextView soma = findViewById(R.id.clicks);
+        //contador++;
+       // soma.setText("Numero de vezes clicados " + contador);
+
+    //}
 }
